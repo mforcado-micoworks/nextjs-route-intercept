@@ -33,7 +33,7 @@ export default function Page() {
         onNavigate={(e) => {
           if (isPreventLeave) {
             e.preventDefault();
-            const hasConfirm = confirm("You cannot leave this page");
+            const hasConfirm = confirm("Click OK to leave this page");
 
             if (hasConfirm) {
               setIsPreventLeave(false);
