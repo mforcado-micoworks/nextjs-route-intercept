@@ -13,10 +13,20 @@ export default function Page() {
       <p>Sample Page</p>
 
       <p>Prevent leave: {isPreventLeave ? "true" : "false"}</p>
-      <br />
-      <button onClick={() => setIsPreventLeave((prev) => !prev)}>
+      <button
+        style={{
+          backgroundColor: isPreventLeave ? "red" : "green",
+          color: "white",
+          padding: "10px 20px",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+        onClick={() => setIsPreventLeave((prev) => !prev)}
+      >
         Click me to toggle prevent leave
       </button>
+      <br />
       <br />
       <Link
         href="/"
@@ -31,8 +41,16 @@ export default function Page() {
             }
           }
         }}
+        style={{
+          backgroundColor: "blue",
+          color: "white",
+          padding: "10px 20px",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
       >
-        Go to home
+        Go home
       </Link>
     </div>
   );
